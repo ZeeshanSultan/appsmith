@@ -181,7 +181,8 @@ export type EventName =
   | "SIGNPOSTING_CONNECT_WIDGET_CLICK"
   | "SIGNPOSTING_PUBLISH_CLICK"
   | "SIGNPOSTING_BUILD_APP_CLICK"
-  | "SIGNPOSTING_WELCOME_TOUR_CLICK";
+  | "SIGNPOSTING_WELCOME_TOUR_CLICK"
+  | "DATASOURCE_AUTH_COMPLETE";
 
 function getApplicationId(location: Location) {
   const pathSplit = location.pathname.split("/");
