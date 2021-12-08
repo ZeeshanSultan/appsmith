@@ -95,7 +95,7 @@ class DatasourceDBEditor extends JSONtoForm<Props> {
   }
 
   renderDataSourceConfigForm = (sections: any) => {
-    const { datasource, messages, pluginType } = this.props;
+    const { datasource, formData, messages, pluginType } = this.props;
     const { viewMode } = this.props;
 
     return (
@@ -155,6 +155,7 @@ class DatasourceDBEditor extends JSONtoForm<Props> {
         {datasource && (
           <DatasourceAuth
             datasource={datasource}
+            formData={formData}
             getSanitizedFormData={_.memoize(this.getSanitizedData)}
             isInvalid={this.validate()}
             shouldRender={!viewMode}
